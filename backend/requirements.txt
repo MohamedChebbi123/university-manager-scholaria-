@@ -10,3 +10,4 @@ python-multipart
 cloudinary
 fastapi-mail
 pandas
+requests
