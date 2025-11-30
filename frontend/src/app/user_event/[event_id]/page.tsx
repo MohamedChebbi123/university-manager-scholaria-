@@ -46,7 +46,7 @@ export default function EventDetailPage() {
         }
 
         const response = await fetch(
-          `http://localhost:8007/fetch_event/${event_id}`,
+          `http://localhost:8000/fetch_event/${event_id}`,
           {
             method: "GET",
             headers: {
@@ -91,7 +91,7 @@ export default function EventDetailPage() {
       }
 
       const response = await fetch(
-        `http://localhost:8007/register_event/${event_id}`,
+        `http://localhost:8000/register_event/${event_id}`,
         {
           method: "POST",
           headers: {
@@ -130,7 +130,7 @@ export default function EventDetailPage() {
       }
 
       const response = await fetch(
-        `http://localhost:8007/unregister_event/${event_id}`,
+        `http://localhost:8000/unregister_event/${event_id}`,
         {
           method: "DELETE",
           headers: {

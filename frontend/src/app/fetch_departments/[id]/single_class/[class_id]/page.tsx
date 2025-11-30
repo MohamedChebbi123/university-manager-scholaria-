@@ -774,7 +774,7 @@ export default function SingleClassPage() {
                     onClick={() => setShowRatrapageModal(true)}
                     className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg"
                   >
-                    + Add Ratrapage
+                    + Add check up
                   </button>
                 )}
               </div>
@@ -809,7 +809,7 @@ export default function SingleClassPage() {
             {/* Ratrapages Section */}
             <div className="mb-8">
               <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-800 via-purple-800 to-pink-800 mb-4 text-center">
-                Ratrapage Sessions
+                check up Sessions
               </h2>
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
                 {ratrapages.length === 0 ? (
