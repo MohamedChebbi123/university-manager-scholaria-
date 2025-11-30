@@ -495,6 +495,7 @@ export default function EventDetailPage() {
                         <option value="conference">Conference</option>
                         <option value="exam">Exam</option>
                         <option value="holiday">Holiday</option>
+                        <option value="general">General</option>
                       </select>
                     </div>
 

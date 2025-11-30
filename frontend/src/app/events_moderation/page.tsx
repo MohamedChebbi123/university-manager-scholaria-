@@ -110,12 +110,12 @@ export default function EventsModerationPage() {
 
       setSuccess("Event created successfully!");
 
-      setFormData({
+      setFormData(prev => ({
+        ...prev,
         event_name: "",
         ends_at: "",
         details: "",
-        event_type: "general",
-      });
+      }));
 
       setTimeout(() => {
         setIsModalOpen(false);
@@ -169,7 +169,8 @@ export default function EventsModerationPage() {
                 <option value="workshop">Workshop</option>
                 <option value="conference">Conference</option>
                 <option value="exam">Exam</option>
-                <option value="holiday">Holiday</option>
+                <option value="general">General</option>
+                
               </select>
             </div>
           </div>
@@ -330,6 +331,7 @@ export default function EventsModerationPage() {
                       required
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
+                      <option value="general">General</option>
                       <option value="academic">Academic</option>
                       <option value="sports">Sports</option>
                       <option value="cultural">Cultural</option>
