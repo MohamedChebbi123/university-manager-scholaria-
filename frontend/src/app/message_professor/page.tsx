@@ -78,7 +78,7 @@ export default function MessageProfessor() {
     try {
       setMessagesLoading(true)
       const token = localStorage.getItem('token')
-      console.log('Fetching messages for professor:', selectedStudent.user_id, 'current user:', currentUserId)
+      console.log('Fetching messages for professor:', selectedProfessor.user_id, 'current user:', currentUserId)
       
       const response = await fetch('https://university-manager-scholaria-6.onrender.com/fetch_messages', {
         headers: {
