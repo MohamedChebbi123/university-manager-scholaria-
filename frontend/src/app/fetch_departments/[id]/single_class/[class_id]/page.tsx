@@ -774,7 +774,7 @@ export default function SingleClassPage() {
                     onClick={() => setShowRatrapageModal(true)}
                     className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg"
                   >
-                    + Add Ratrapage
+                    + Add make-up session
                   </button>
                 )}
               </div>
@@ -809,7 +809,7 @@ export default function SingleClassPage() {
             {/* Ratrapages Section */}
             <div className="mb-8">
               <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-800 via-purple-800 to-pink-800 mb-4 text-center">
-                Ratrapage Sessions
+                make-up Sessions
               </h2>
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
                 {ratrapages.length === 0 ? (
@@ -917,7 +917,7 @@ export default function SingleClassPage() {
               <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
                 <form onSubmit={handleAddRatrapage} className="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md max-h-[90vh] overflow-y-auto">
                   <h2 className="text-2xl font-bold mb-4 text-gray-800 text-center">
-                    {editingRatrapageId ? "Edit Ratrapage Session" : "Add Ratrapage Session"}
+                    {editingRatrapageId ? "Edit Ratrapage Session" : "Add make up Session"}
                   </h2>
 
                   <div className="space-y-4">

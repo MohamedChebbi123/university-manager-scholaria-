@@ -100,7 +100,7 @@ export default function SingleSessionPage() {
 
         // Fetch session details
         const sessionRes = await fetch(
-          `http://127.0.0.1:8003/fetch_single_session_for_admin/${session_id}`,
+          `http://127.0.0.1:8000/fetch_single_session_for_admin/${session_id}`,
           {
             headers: { Authorization: `Bearer ${token}` }
           }
@@ -115,7 +115,7 @@ export default function SingleSessionPage() {
 
         // Fetch absence data
         const absenceRes = await fetch(
-          `http://127.0.0.1:8004/absences/class_for_admin/${class_id}/session/${session_id}`,
+          `http://127.0.0.1:8000/absences/class_for_admin/${class_id}/session/${session_id}`,
           {
             headers: { Authorization: `Bearer ${token}` }
           }
@@ -239,11 +239,7 @@ export default function SingleSessionPage() {
 
               {/* Main Session Card */}
               <div className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
-                <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-4">
-                  <h2 className="text-2xl font-bold text-white">
-                    {subject?.subject_name || "Loading subject..."}
-                  </h2>
-                </div>
+                
 
                 <div className="p-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

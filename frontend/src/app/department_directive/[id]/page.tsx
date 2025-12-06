@@ -599,7 +599,7 @@ export default function ClassDetailsPage() {
           {/* Ratrapages Section */}
           <div className="mb-8">
             <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-800 via-purple-800 to-pink-800 mb-4 text-center">
-              Ratrapage Sessions
+              check ups Sessions
             </h2>
             <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
               {ratrapages.length === 0 ? (

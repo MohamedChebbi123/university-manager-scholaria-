@@ -423,7 +423,7 @@ export default function ClassPage() {
           {ratrapages.length > 0 && (
             <div className="mb-8">
               <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 mb-4 text-center">
-                Ratrapage Sessions
+                check ups Sessions
               </h2>
               <div className="bg-white rounded-xl shadow-xl border border-gray-200 p-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
