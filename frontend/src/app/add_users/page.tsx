@@ -41,7 +41,7 @@ export default function AddUsersPage() {
         return;
       }
 
-      const response = await fetch("http://127.0.0.1:8000/add_users", {
+      const response = await fetch("https://university-manager-scholaria-6.onrender.com/add_users", {
         method: "POST",
         body: formData,
         headers: { Authorization: `Bearer ${token}` },

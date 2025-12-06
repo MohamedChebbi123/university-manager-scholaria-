@@ -100,7 +100,7 @@ export default function SingleSessionPage() {
 
         // Fetch session details
         const sessionRes = await fetch(
-          `http://127.0.0.1:8003/fetch_single_session_for_admin/${session_id}`,
+          `https://university-manager-scholaria-6.onrender.com/fetch_single_session_for_admin/${session_id}`,
           {
             headers: { Authorization: `Bearer ${token}` }
           }
@@ -115,7 +115,7 @@ export default function SingleSessionPage() {
 
         // Fetch absence data
         const absenceRes = await fetch(
-          `http://127.0.0.1:8004/absences/class_for_admin/${class_id}/session/${session_id}`,
+          `https://university-manager-scholaria-6.onrender.com/absences/class_for_admin/${class_id}/session/${session_id}`,
           {
             headers: { Authorization: `Bearer ${token}` }
           }
@@ -128,10 +128,10 @@ export default function SingleSessionPage() {
 
         // Fetch class and subject info (professor and room now come from session data)
         const [profRes, classRes] = await Promise.all([
-          fetch(`http://127.0.0.1:8000/fetch_professor/${sessionData.professor_id}`, {
+          fetch(`https://university-manager-scholaria-6.onrender.com/fetch_professor/${sessionData.professor_id}`, {
             headers: { Authorization: `Bearer ${token}` }
           }),
-          fetch(`http://127.0.0.1:8000/fetch_class/${sessionData.class_id}`, {
+          fetch(`https://university-manager-scholaria-6.onrender.com/fetch_class/${sessionData.class_id}`, {
             headers: { Authorization: `Bearer ${token}` }
           })
         ])

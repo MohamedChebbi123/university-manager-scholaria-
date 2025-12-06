@@ -66,8 +66,8 @@ export default function SingleSessionPage() {
       const token = localStorage.getItem("token")
       if (!token) return
 
-      const res = await fetch(`http://127.0.0.1:8000/fetch_single_session_for_director/${session_id}`, {
-        headers: { "Authorization": `Bearer ${token}` }
+      const res = await fetch(`https://university-manager-scholaria-6.onrender.com/fetch_single_session_for_director/${session_id}`, {
+        headers: { Authorization: `Bearer ${token}` },
       })
       
       if (!res.ok) throw new Error("Failed to fetch session details")
@@ -86,8 +86,8 @@ export default function SingleSessionPage() {
       const token = localStorage.getItem("token")
       if (!token) return
 
-      const res = await fetch(`http://127.0.0.1:8000/absences/class_for_director/${id}/session/${session_id}`, {
-        headers: { "Authorization": `Bearer ${token}` }
+      const res = await fetch(`https://university-manager-scholaria-6.onrender.com/absences/class_for_director/${id}/session/${session_id}`, {
+        headers: { Authorization: `Bearer ${token}` },
       })
       
       if (!res.ok) throw new Error("Failed to fetch absence data")

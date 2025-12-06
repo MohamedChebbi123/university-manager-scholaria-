@@ -28,7 +28,7 @@ export default function DirectorPage() {
     try {
       const token = localStorage.getItem("token")
 
-      const res = await fetch("http://127.0.0.1:8000/fetch_department_for_director", {
+      const res = await fetch("https://university-manager-scholaria-6.onrender.com/fetch_department_for_director", {
         method: "GET",
         headers: {
           "Authorization": `Bearer ${token}`,
@@ -54,7 +54,7 @@ export default function DirectorPage() {
     try {
       const token = localStorage.getItem("token")
 
-      const res = await fetch(`http://127.0.0.1:8000/fetch_subjects_with_professors/${departmentId}`, {
+      const res = await fetch(`https://university-manager-scholaria-6.onrender.com/fetch_subjects_with_professors/${departmentId}`, {
         method: "GET",
         headers: {
           "Authorization": `Bearer ${token}`,
@@ -76,7 +76,7 @@ export default function DirectorPage() {
     try {
       const token = localStorage.getItem("token")
 
-      const res = await fetch(`http://127.0.0.1:8000/fetch_sessions_by_department/${departmentId}`, {
+      const res = await fetch(`https://university-manager-scholaria-6.onrender.com/fetch_sessions_by_department/${departmentId}`, {
         method: "GET",
         headers: {
           "Authorization": `Bearer ${token}`,
@@ -98,7 +98,7 @@ export default function DirectorPage() {
     try {
       const token = localStorage.getItem("token")
 
-      const res = await fetch("http://127.0.0.1:8000/fetch_classes_for_director", {
+      const res = await fetch("https://university-manager-scholaria-6.onrender.com/fetch_classes_for_director", {
         method: "GET",
         headers: {
           "Authorization": `Bearer ${token}`,

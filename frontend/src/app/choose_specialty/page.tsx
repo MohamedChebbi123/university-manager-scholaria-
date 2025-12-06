@@ -29,7 +29,7 @@ export default function ChooseSpecialty() {
       setLoading(true);
       setMessage("");
 
-      const res = await fetch("http://127.0.0.1:8000/choose_speciality", {
+      const res = await fetch("https://university-manager-scholaria-6.onrender.com/choose_speciality", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

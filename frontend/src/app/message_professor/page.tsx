@@ -49,7 +49,7 @@ export default function MessageProfessor() {
           setCurrentUserId(tokenPayload.sub)
         }
         
-        const response = await fetch(`http://127.0.0.1:8000/fetch_professor_for_students`, {
+        const response = await fetch(`https://university-manager-scholaria-6.onrender.com/fetch_professor_for_students`, {
           headers: { Authorization: `Bearer ${token}` }
         })
 
@@ -78,9 +78,9 @@ export default function MessageProfessor() {
     try {
       setMessagesLoading(true)
       const token = localStorage.getItem('token')
-      console.log('Fetching messages for professor:', selectedProfessor.user_id, 'current user:', currentUserId)
+      console.log('Fetching messages for professor:', selectedStudent.user_id, 'current user:', currentUserId)
       
-      const response = await fetch('http://127.0.0.1:8000/fetch_messages', {
+      const response = await fetch('https://university-manager-scholaria-6.onrender.com/fetch_messages', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -163,7 +163,7 @@ export default function MessageProfessor() {
       const tokenPayload = JSON.parse(atob(token!.split('.')[1]))
       const senderId = tokenPayload.sub
       
-      const response = await fetch('http://127.0.0.1:8000/send_message_users', {
+      const response = await fetch('https://university-manager-scholaria-6.onrender.com/send_message_users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -195,7 +195,7 @@ export default function MessageProfessor() {
     try {
       const token = localStorage.getItem('token')
       
-      const response = await fetch(`http://127.0.0.1:8000/delete_message/${messageId}`, {
+      const response = await fetch(`https://university-manager-scholaria-6.onrender.com/delete_message/${messageId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -230,7 +230,7 @@ export default function MessageProfessor() {
     try {
       const token = localStorage.getItem('token')
       
-      const response = await fetch(`http://127.0.0.1:8000/edit_message/${messageId}`, {
+      const response = await fetch(`https://university-manager-scholaria-6.onrender.com/edit_message/${messageId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

@@ -168,11 +168,11 @@ export default function SingleClassPage() {
         setLoading(true)
 
         const [classRes, profRes, roomRes, sessionsRes, ratrapagesRes] = await Promise.all([
-          fetch(`http://127.0.0.1:8000/fetch_class/${class_id}`, { headers: { Authorization: `Bearer ${token}` } }),
-          fetch(`http://127.0.0.1:8000/fetch_professors`, { headers: { Authorization: `Bearer ${token}` } }),
-          fetch(`http://127.0.0.1:8000/fetch_rooms/${id}`, { headers: { Authorization: `Bearer ${token}` } }),
-          fetch(`http://127.0.0.1:8000/fetch_sessions/${class_id}`, { headers: { Authorization: `Bearer ${token}` } }),
-          fetch(`http://127.0.0.1:8000/fetch_ratrapages/${class_id}`, { headers: { Authorization: `Bearer ${token}` } }),
+          fetch(`https://university-manager-scholaria-6.onrender.com/fetch_class/${class_id}`, { headers: { Authorization: `Bearer ${token}` } }),
+          fetch(`https://university-manager-scholaria-6.onrender.com/fetch_professors`, { headers: { Authorization: `Bearer ${token}` } }),
+          fetch(`https://university-manager-scholaria-6.onrender.com/fetch_rooms/${id}`, { headers: { Authorization: `Bearer ${token}` } }),
+          fetch(`https://university-manager-scholaria-6.onrender.com/fetch_sessions/${class_id}`, { headers: { Authorization: `Bearer ${token}` } }),
+          fetch(`https://university-manager-scholaria-6.onrender.com/fetch_ratrapages/${class_id}`, { headers: { Authorization: `Bearer ${token}` } }),
         ])
 
         const [classData, profData, roomData, sessionsData, ratrapagesData] = await Promise.all([
@@ -211,7 +211,7 @@ export default function SingleClassPage() {
       return
     }
 
-    const res = await fetch("http://127.0.0.1:8000/add_session", {
+    const res = await fetch("https://university-manager-scholaria-6.onrender.com/add_session", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -270,7 +270,7 @@ export default function SingleClassPage() {
   }
 
   const handleCreateRatrapage = async () => {
-    const res = await fetch("http://127.0.0.1:8000/add_ratrappage", {
+    const res = await fetch("https://university-manager-scholaria-6.onrender.com/add_ratrappage", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -300,7 +300,7 @@ export default function SingleClassPage() {
   }
 
   const handleUpdateRatrapage = async () => {
-    const res = await fetch(`http://127.0.0.1:8000/update_ratrapage/${editingRatrapageId}`, {
+    const res = await fetch(`https://university-manager-scholaria-6.onrender.com/update_ratrapage/${editingRatrapageId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -330,7 +330,7 @@ export default function SingleClassPage() {
   }
 
   const refreshRatrapages = async () => {
-    const ratrapagesRes = await fetch(`http://127.0.0.1:8000/fetch_ratrapages/${class_id}`, {
+    const ratrapagesRes = await fetch(`https://university-manager-scholaria-6.onrender.com/fetch_ratrapages/${class_id}`, {
       headers: { Authorization: `Bearer ${token}` }
     })
     const ratrapagesData = await ratrapagesRes.json()
@@ -373,7 +373,7 @@ export default function SingleClassPage() {
       return
     }
 
-    const res = await fetch(`http://127.0.0.1:8000/delete_ratrapage/${ratrapageId}`, {
+    const res = await fetch(`https://university-manager-scholaria-6.onrender.com/delete_ratrapage/${ratrapageId}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -397,7 +397,7 @@ export default function SingleClassPage() {
       return
     }
 
-    const res = await fetch(`http://127.0.0.1:8000/delete_session/${sessionId}`, {
+    const res = await fetch(`https://university-manager-scholaria-6.onrender.com/delete_session/${sessionId}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -416,7 +416,7 @@ export default function SingleClassPage() {
   const fetchStatistics = async () => {
     setLoadingStats(true)
     try {
-      const res = await fetch(`http://127.0.0.1:8000/class/${class_id}`, {
+      const res = await fetch(`https://university-manager-scholaria-6.onrender.com/class/${class_id}`, {
         headers: { Authorization: `Bearer ${token}` }
       })
       if (res.ok) {

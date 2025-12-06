@@ -102,7 +102,7 @@ export default function DepartmentPage() {
 
     const fetchDepartment = async () => {
       try {
-        const res = await fetch(`http://127.0.0.1:8000/fetch_single_department/${id}`, {
+        const res = await fetch(`https://university-manager-scholaria-6.onrender.com/fetch_single_department/${id}`, {
           method: "GET",
           headers: {
             "Authorization": `Bearer ${token}`
@@ -129,7 +129,7 @@ export default function DepartmentPage() {
 
     setLoadingClasses(true)
     try {
-      const res = await fetch(`http://127.0.0.1:8000/fetch_classes/${id}?department_id=${id}`, {
+      const res = await fetch(`https://university-manager-scholaria-6.onrender.com/fetch_classes/${id}?department_id=${id}`, {
         method: "GET",
         headers: {
           "Authorization": `Bearer ${token}`
@@ -171,7 +171,7 @@ export default function DepartmentPage() {
 
     setLoadingRooms(true)
     try {
-      const res = await fetch(`http://127.0.0.1:8000/fetch_single_department/${id}/fetch_rooms`, {
+      const res = await fetch(`https://university-manager-scholaria-6.onrender.com/fetch_single_department/${id}/fetch_rooms`, {
         method: "GET",
         headers: {
           "Authorization": `Bearer ${token}`
@@ -208,7 +208,7 @@ export default function DepartmentPage() {
     if (!token) return
 
     try {
-      const res = await fetch(`http://127.0.0.1:8000/fetch_professors`, {
+      const res = await fetch(`https://university-manager-scholaria-6.onrender.com/fetch_professors`, {
         method: "GET",
         headers: {
           "Authorization": `Bearer ${token}`
@@ -231,7 +231,7 @@ export default function DepartmentPage() {
 
     setLoadingDirector(true)
     try {
-      const res = await fetch(`http://127.0.0.1:8000/fetch_director_department_info/${id}`, {
+      const res = await fetch(`https://university-manager-scholaria-6.onrender.com/fetch_director_department_info/${id}`, {
         method: "GET",
         headers: {
           "Authorization": `Bearer ${token}`
@@ -262,7 +262,7 @@ export default function DepartmentPage() {
     setLoadingSubjects(true)
     try {
       // Call backend endpoint that returns subjects with professor names
-      const res = await fetch(`http://127.0.0.1:8000/fetch_subjects_with_professors/${id}`, {
+      const res = await fetch(`https://university-manager-scholaria-6.onrender.com/fetch_subjects_with_professors/${id}`, {
         method: "GET",
         headers: {
           "Authorization": `Bearer ${token}`
@@ -323,7 +323,7 @@ export default function DepartmentPage() {
 
     setAddingClass(true)
     try {
-      const res = await fetch(`http://127.0.0.1:8000/add_class`, {
+      const res = await fetch(`https://university-manager-scholaria-6.onrender.com/add_class`, {
         method: "POST",
         headers: {
           "Authorization": `Bearer ${token}`
@@ -360,7 +360,7 @@ export default function DepartmentPage() {
 
     setAddingDirector(true)
     try {
-      const res = await fetch(`http://127.0.0.1:8000/add_director?department_id=${id}`, {
+      const res = await fetch(`https://university-manager-scholaria-6.onrender.com/add_director?department_id=${id}`, {
         method: "POST",
         headers: {
           "Authorization": `Bearer ${token}`,
@@ -405,7 +405,7 @@ export default function DepartmentPage() {
     if (!token) return
 
     try {
-      const res = await fetch(`http://127.0.0.1:8000/delete_director/${id}`, {
+      const res = await fetch(`https://university-manager-scholaria-6.onrender.com/delete_director/${id}`, {
         method: "DELETE",
         headers: {
           "Authorization": `Bearer ${token}`
@@ -435,7 +435,7 @@ export default function DepartmentPage() {
 
     setAddingRoom(true)
     try {
-      const res = await fetch(`http://127.0.0.1:8000/fetch_single_department/${id}/add_room`, {
+      const res = await fetch(`https://university-manager-scholaria-6.onrender.com/fetch_single_department/${id}/add_room`, {
         method: "POST",
         headers: {
           "Authorization": `Bearer ${token}`,
@@ -471,7 +471,7 @@ export default function DepartmentPage() {
 
     setAddingSubject(true)
     try {
-      const res = await fetch(`http://127.0.0.1:8000/add_csubject_to_department`, {
+      const res = await fetch(`https://university-manager-scholaria-6.onrender.com/add_csubject_to_department`, {
         method: "POST",
         headers: {
           "Authorization": `Bearer ${token}`,

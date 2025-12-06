@@ -36,7 +36,7 @@ export default function FetchDepartments() {
 
     const fetchDepartments = async () => {
       try {
-        const res = await fetch("http://127.0.0.1:8000/fetch_all_departments", {
+        const res = await fetch("https://university-manager-scholaria-6.onrender.com/fetch_all_departments", {
           method: "GET",
           headers: {
             "Authorization": `Bearer ${token}`,
@@ -72,7 +72,7 @@ export default function FetchDepartments() {
     setDeleting(departmentId)
 
     try {
-      const res = await fetch(`http://127.0.0.1:8000/delete_department/${departmentId}`, {
+      const res = await fetch(`https://university-manager-scholaria-6.onrender.com/delete_department/${departmentId}`, {
         method: "DELETE",
         headers: {
           "Authorization": `Bearer ${token}`,

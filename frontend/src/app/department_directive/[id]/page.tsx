@@ -99,8 +99,8 @@ export default function ClassDetailsPage() {
       const token = localStorage.getItem("token")
       if (!token) return
 
-      const res = await fetch(`http://127.0.0.1:8000/fetch_class_for_director/${id}`, {
-        headers: { "Authorization": `Bearer ${token}` }
+      const res = await fetch(`https://university-manager-scholaria-6.onrender.com/fetch_class_for_director/${id}`, {
+        headers: { Authorization: `Bearer ${token}` },
       })
       if (!res.ok) throw new Error("Failed to fetch class info")
 
@@ -117,8 +117,8 @@ export default function ClassDetailsPage() {
       const token = localStorage.getItem("token")
       if (!token) return
 
-      const res = await fetch(`http://127.0.0.1:8000/fetch_class_session_for_director/${id}`, {
-        headers: { "Authorization": `Bearer ${token}` }
+      const res = await fetch(`https://university-manager-scholaria-6.onrender.com/fetch_class_session_for_director/${id}`, {
+        headers: { Authorization: `Bearer ${token}` },
       })
       if (!res.ok) throw new Error("Failed to fetch class sessions")
 
@@ -137,8 +137,8 @@ export default function ClassDetailsPage() {
       const token = localStorage.getItem("token")
       if (!token) return
 
-      const res = await fetch(`http://127.0.0.1:8000/fetch_ratrapages/${id}`, {
-        headers: { "Authorization": `Bearer ${token}` }
+      const res = await fetch(`https://university-manager-scholaria-6.onrender.com/fetch_ratrapages/${id}`, {
+        headers: { Authorization: `Bearer ${token}` },
       })
       if (!res.ok) throw new Error("Failed to fetch ratrapages")
 
@@ -156,8 +156,8 @@ export default function ClassDetailsPage() {
       const token = localStorage.getItem("token")
       if (!token) return
 
-      const res = await fetch(`http://127.0.0.1:8000/class/${id}`, {
-        headers: { Authorization: `Bearer ${token}` }
+      const res = await fetch(`https://university-manager-scholaria-6.onrender.com/class/${id}`, {
+        headers: { Authorization: `Bearer ${token}` },
       })
       if (res.ok) {
         const data = await res.json()
