@@ -1,5 +1,4 @@
 from fastapi import Depends, HTTPException, Header
-from grpc import Status
 from Database.connection import connect_databse
 from sqlalchemy.orm import Session as DBSession, joinedload
 from sqlalchemy import func, distinct
