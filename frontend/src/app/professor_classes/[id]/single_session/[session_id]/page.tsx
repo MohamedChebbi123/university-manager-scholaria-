@@ -54,7 +54,7 @@ export default function SingleSessionPage() {
         }
 
         // Fetch session data
-        const sessionRes = await fetch(`http://localhost:8000/get_signle_session_info_professor/${sessionId}`, {
+        const sessionRes = await fetch(`https://university-manager-scholaria-6.onrender.com/get_signle_session_info_professor/${sessionId}`, {
           headers: {
             "Authorization": `Bearer ${token}`
           }
@@ -70,7 +70,7 @@ export default function SingleSessionPage() {
 
         // ⭐ Fetch existing absences for this session
         try {
-          const absencesRes = await fetch(`http://localhost:8000/absences/class/${classId}/session/${sessionId}`, {
+          const absencesRes = await fetch(`https://university-manager-scholaria-6.onrender.com/absences/class/${classId}/session/${sessionId}`, {
             headers: {
               "Authorization": `Bearer ${token}`
             }
@@ -100,7 +100,7 @@ export default function SingleSessionPage() {
         }
 
         // ⭐ If no existing absences, fetch all students of this class
-        const studentsRes = await fetch(`http://localhost:8000/get_students_for_session/${sessionData.class_id}`, {
+        const studentsRes = await fetch(`https://university-manager-scholaria-6.onrender.com/get_students_for_session/${sessionData.class_id}`, {
           headers: {
             "Authorization": `Bearer ${token}`
           }
@@ -157,7 +157,7 @@ export default function SingleSessionPage() {
 
       // Submit absence for each student
       const promises = students.map(student => 
-        fetch("http://localhost:8000/assign_absence", {
+        fetch("https://university-manager-scholaria-6.onrender.com/assign_absence", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

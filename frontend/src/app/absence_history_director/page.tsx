@@ -68,7 +68,7 @@ export default function DirectorAbsenceHistoryPage() {
       }
 
       try {
-        const response = await fetch(`http://localhost:8000/director_all_absences_by_subject`, {
+        const response = await fetch(`https://university-manager-scholaria-6.onrender.com/director_all_absences_by_subject`, {
           headers: { Authorization: `Bearer ${token}` },
         })
 

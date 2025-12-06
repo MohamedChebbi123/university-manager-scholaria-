@@ -73,7 +73,7 @@ export default function UserProfile() {
           return;
         }
 
-        const res = await fetch("http://localhost:8000/user_profile", {
+        const res = await fetch("https://university-manager-scholaria-6.onrender.com/user_profile", {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,
@@ -130,7 +130,7 @@ export default function UserProfile() {
         body.append("profile_picture", profilePictureFile);
       }
 
-      const res = await fetch("http://localhost:8000/edit_profile", {
+      const res = await fetch("https://university-manager-scholaria-6.onrender.com/edit_profile", {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -146,7 +146,7 @@ export default function UserProfile() {
       const updatedUser = await res.json();
       alert(updatedUser.message);
       
-      const profileRes = await fetch("http://localhost:8000/user_profile", {
+      const profileRes = await fetch("https://university-manager-scholaria-6.onrender.com/user_profile", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -193,7 +193,7 @@ export default function UserProfile() {
       body.append("old_password", passwordData.oldPassword);
       body.append("new_password", passwordData.newPassword);
 
-      const res = await fetch("http://localhost:8000/change_password", {
+      const res = await fetch("https://university-manager-scholaria-6.onrender.com/change_password", {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${token}`,

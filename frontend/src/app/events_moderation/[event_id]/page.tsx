@@ -55,7 +55,7 @@ export default function EventDetailPage() {
         throw new Error("No authentication token found");
       }
 
-      const response = await fetch(`http://localhost:8000/fetch_event/${event_id}`, {
+      const response = await fetch(`https://university-manager-scholaria-6.onrender.com/fetch_event/${event_id}`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -87,7 +87,7 @@ export default function EventDetailPage() {
         throw new Error("No authentication token found");
       }
 
-      const response = await fetch(`http://localhost:8000/event_attendees/${event_id}`, {
+      const response = await fetch(`https://university-manager-scholaria-6.onrender.com/event_attendees/${event_id}`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -138,7 +138,7 @@ export default function EventDetailPage() {
         event_type: editFormData.event_type,
       };
 
-      const response = await fetch(`http://localhost:8000/update_event/${event_id}`, {
+      const response = await fetch(`https://university-manager-scholaria-6.onrender.com/update_event/${event_id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -177,7 +177,7 @@ export default function EventDetailPage() {
         throw new Error("No authentication token found");
       }
 
-      const response = await fetch(`http://localhost:8000/delete_event/${event_id}`, {
+      const response = await fetch(`https://university-manager-scholaria-6.onrender.com/delete_event/${event_id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,

@@ -40,7 +40,7 @@ export default function CreateDepartment() {
     try {
       const token = localStorage.getItem("token"); 
 
-      const res = await fetch("http://localhost:8000/add_a_department", {
+      const res = await fetch("https://university-manager-scholaria-6.onrender.com/add_a_department", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,

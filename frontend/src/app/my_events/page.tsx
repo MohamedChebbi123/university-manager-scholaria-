@@ -38,7 +38,7 @@ export default function MyEventsPage() {
           return;
         }
 
-        const response = await fetch("http://localhost:8000/my_events", {
+        const response = await fetch("https://university-manager-scholaria-6.onrender.com/my_events", {
           method: "GET",
           headers: {
             "Authorization": `Bearer ${token}`,

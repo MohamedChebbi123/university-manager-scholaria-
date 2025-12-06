@@ -68,7 +68,7 @@ export default function ProfessorSubjectAbsencesPage() {
       }
 
       try {
-        const response = await fetch(`http://localhost:8000/professor_subject_absences`, {
+        const response = await fetch(`https://university-manager-scholaria-6.onrender.com/professor_subject_absences`, {
           headers: { Authorization: `Bearer ${token}` },
         })
 

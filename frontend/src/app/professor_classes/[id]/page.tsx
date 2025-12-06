@@ -97,7 +97,7 @@ export default function ClassPage() {
         return
       }
 
-      const res = await fetch(`http://localhost:8000/fetch_classes_info_for_pr/${classId}`, {
+      const res = await fetch(`https://university-manager-scholaria-6.onrender.com/fetch_classes_info_for_pr/${classId}`, {
         headers: { "Authorization": `Bearer ${token}` }
       })
       if (!res.ok) throw new Error("Failed to fetch class info")
@@ -115,7 +115,7 @@ export default function ClassPage() {
       const token = localStorage.getItem("token")
       if (!token) return
 
-      const res = await fetch(`http://localhost:8000/fetch_class_session/${classId}`, {
+      const res = await fetch(`https://university-manager-scholaria-6.onrender.com/fetch_class_session/${classId}`, {
         headers: { "Authorization": `Bearer ${token}` }
       })
       if (!res.ok) throw new Error("Failed to fetch class sessions")
@@ -136,7 +136,7 @@ export default function ClassPage() {
       const token = localStorage.getItem("token")
       if (!token) return
 
-      const res = await fetch(`http://localhost:8000/fetch_ratrapages/${classId}`, {
+      const res = await fetch(`https://university-manager-scholaria-6.onrender.com/fetch_ratrapages/${classId}`, {
         headers: { "Authorization": `Bearer ${token}` }
       })
       if (!res.ok) throw new Error("Failed to fetch ratrapages")

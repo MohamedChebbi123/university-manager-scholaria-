@@ -53,7 +53,7 @@ export default function UsersList() {
         console.log(role)
         if (!token) return setError("No token found. Please login.");
         try {
-            const res = await fetch("http://localhost:8000/fetch_all_users", {
+            const res = await fetch("https://university-manager-scholaria-6.onrender.com/fetch_all_users", {
                 headers: { Authorization: `Bearer ${token}` }
             });
             if (!res.ok) throw new Error("Failed to fetch users");

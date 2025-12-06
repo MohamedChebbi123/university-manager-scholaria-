@@ -75,7 +75,7 @@ export default function AbsencesRevoke() {
                 return
             }
 
-            const response = await fetch('http://localhost:8000/fetch_requests', {
+            const response = await fetch('https://university-manager-scholaria-6.onrender.com/fetch_requests', {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -105,7 +105,7 @@ export default function AbsencesRevoke() {
                 return
             }
 
-            const response = await fetch(`http://localhost:8000/accept_absence/${demandeId}`, {
+            const response = await fetch(`https://university-manager-scholaria-6.onrender.com/accept_absence/${demandeId}`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -139,7 +139,7 @@ export default function AbsencesRevoke() {
             const confirmed = confirm('Are you sure you want to reject this request? This action cannot be undone.')
             if (!confirmed) return
 
-            const response = await fetch(`http://localhost:8000/reject_absence/${demandeId}`, {
+            const response = await fetch(`https://university-manager-scholaria-6.onrender.com/reject_absence/${demandeId}`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,

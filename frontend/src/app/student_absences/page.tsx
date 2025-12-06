@@ -59,7 +59,7 @@ export default function StudentAbsencesPage() {
       setRole(storedRole || "")
 
       try {
-        const response = await fetch("http://localhost:8000/student_all_absences", {
+        const response = await fetch("https://university-manager-scholaria-6.onrender.com/student_all_absences", {
           headers: { Authorization: `Bearer ${token}` },
         })
 

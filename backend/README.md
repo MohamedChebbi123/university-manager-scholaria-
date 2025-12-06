@@ -105,8 +105,8 @@ uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ## API Documentation
 
 Once the application is running, you can access:
-- Swagger UI: http://localhost:8000/docs
-- ReDoc: http://localhost:8000/redoc
+- Swagger UI: https://university-manager-scholaria-6.onrender.com/docs
+- ReDoc: https://university-manager-scholaria-6.onrender.com/redoc
 
 ## Features
 

@@ -87,7 +87,7 @@ export default function SessionDetailPage() {
       setRole(storedRole || "")
 
       try {
-        const response = await fetch(`http://localhost:8000/fetch_single_session_for_student/${session_id}`, {
+        const response = await fetch(`https://university-manager-scholaria-6.onrender.com/fetch_single_session_for_student/${session_id}`, {
           headers: { Authorization: `Bearer ${token}` },
         })
         
@@ -98,7 +98,7 @@ export default function SessionDetailPage() {
 
         // Fetch absence information
         const absenceResponse = await fetch(
-          `http://localhost:8000/absences/class_for_student/${data.class_id}/session/${session_id}`,
+          `https://university-manager-scholaria-6.onrender.com/absences/class_for_student/${data.class_id}/session/${session_id}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -111,7 +111,7 @@ export default function SessionDetailPage() {
 
         // Fetch student's own absence history for this session
         const historyResponse = await fetch(
-          `http://localhost:8000/student_absence_history/${session_id}`,
+          `https://university-manager-scholaria-6.onrender.com/student_absence_history/${session_id}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -163,7 +163,7 @@ export default function SessionDetailPage() {
       formData.append("document", demandDocument)
       formData.append("absence_id", absenceInfo.absence_id.toString())
 
-      const response = await fetch("http://localhost:8000/demand_absence", {
+      const response = await fetch("https://university-manager-scholaria-6.onrender.com/demand_absence", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,

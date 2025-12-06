@@ -49,7 +49,7 @@ export default function EventsModerationPage() {
         throw new Error("No authentication token found");
       }
 
-      const response = await fetch("http://localhost:8000/fetch_events", {
+      const response = await fetch("https://university-manager-scholaria-6.onrender.com/fetch_events", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -93,7 +93,7 @@ export default function EventsModerationPage() {
         throw new Error("No authentication token found");
       }
 
-      const response = await fetch("http://localhost:8000/add_event", {
+      const response = await fetch("https://university-manager-scholaria-6.onrender.com/add_event", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

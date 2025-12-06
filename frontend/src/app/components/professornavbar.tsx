@@ -12,7 +12,7 @@ export default function ProfessorNavbar() {
         const token = localStorage.getItem("token");
         if (!token) return;
 
-        const res = await fetch("http://localhost:8000/user_profile", {
+        const res = await fetch("https://university-manager-scholaria-6.onrender.com/user_profile", {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,

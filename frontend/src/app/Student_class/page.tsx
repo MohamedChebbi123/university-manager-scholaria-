@@ -77,14 +77,14 @@ export default function StudentDashboard() {
       setRole(storedRole || "")
 
       try {
-        const resStudent = await fetch("http://localhost:8000/fetch_classes_for_student", {
+        const resStudent = await fetch("https://university-manager-scholaria-6.onrender.com/fetch_classes_for_student", {
           headers: { Authorization: `Bearer ${token}` },
         })
         if (!resStudent.ok) throw new Error("Failed to fetch student info")
         const dataStudent: StudentInfo = await resStudent.json()
         setStudent(dataStudent)
 
-        const resSessions = await fetch("http://localhost:8000/fetch_session_for_students", {
+        const resSessions = await fetch("https://university-manager-scholaria-6.onrender.com/fetch_session_for_students", {
           headers: { Authorization: `Bearer ${token}` },
         })
         if (!resSessions.ok) throw new Error("Failed to fetch sessions")
@@ -98,7 +98,7 @@ export default function StudentDashboard() {
         // Fetch ratrapages if student has a class
         if (dataStudent.class?.id) {
           try {
-            const resRatrapages = await fetch(`http://localhost:8000/fetch_ratrapages/${dataStudent.class.id}`, {
+            const resRatrapages = await fetch(`https://university-manager-scholaria-6.onrender.com/fetch_ratrapages/${dataStudent.class.id}`, {
               headers: { Authorization: `Bearer ${token}` },
             })
             if (resRatrapages.ok) {

@@ -46,7 +46,7 @@ export default function EventDetailPage() {
         }
 
         const response = await fetch(
-          `http://localhost:8000/fetch_event/${event_id}`,
+          `https://university-manager-scholaria-6.onrender.com/fetch_event/${event_id}`,
           {
             method: "GET",
             headers: {
@@ -91,7 +91,7 @@ export default function EventDetailPage() {
       }
 
       const response = await fetch(
-        `http://localhost:8000/register_event/${event_id}`,
+        `https://university-manager-scholaria-6.onrender.com/register_event/${event_id}`,
         {
           method: "POST",
           headers: {
@@ -130,7 +130,7 @@ export default function EventDetailPage() {
       }
 
       const response = await fetch(
-        `http://localhost:8000/unregister_event/${event_id}`,
+        `https://university-manager-scholaria-6.onrender.com/unregister_event/${event_id}`,
         {
           method: "DELETE",
           headers: {

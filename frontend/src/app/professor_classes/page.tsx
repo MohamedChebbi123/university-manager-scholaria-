@@ -67,7 +67,7 @@ export default function ProfessorDashboard() {
       }
 
       // Fetch sessions
-      const sessionRes = await fetch("http://localhost:8000/fetch_session_for_professor", {
+      const sessionRes = await fetch("https://university-manager-scholaria-6.onrender.com/fetch_session_for_professor", {
         headers: { "Authorization": `Bearer ${token}` }
       })
       if (!sessionRes.ok) throw new Error("Failed to fetch sessions")
@@ -75,7 +75,7 @@ export default function ProfessorDashboard() {
       setSessions(sessionData.sessions)
 
       // Fetch classes
-      const classRes = await fetch("http://localhost:8000/fetch_professor_classes", {
+      const classRes = await fetch("https://university-manager-scholaria-6.onrender.com/fetch_professor_classes", {
         headers: { "Authorization": `Bearer ${token}` }
       })
       if (!classRes.ok) throw new Error("Failed to fetch classes")

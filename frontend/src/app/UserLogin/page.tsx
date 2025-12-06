@@ -19,7 +19,7 @@ export default function LoginPage() {
     setMessage({ type: null, text: '' });
 
     try {
-      const res = await fetch("http://localhost:8000/user_login", {
+      const res = await fetch("https://university-manager-scholaria-6.onrender.com/user_login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),

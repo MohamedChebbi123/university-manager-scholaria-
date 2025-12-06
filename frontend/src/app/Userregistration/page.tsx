@@ -49,7 +49,7 @@ export default function UserRegistration() {
     data.append("role", role);
 
     try {
-      const res = await fetch("http://localhost:8000/user_registration", {
+      const res = await fetch("https://university-manager-scholaria-6.onrender.com/user_registration", {
         method: "POST",
         body: data,
       });
